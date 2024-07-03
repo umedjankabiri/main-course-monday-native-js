@@ -6,3 +6,6 @@ export const addMoneyToBudget = (building: GovermentBuildingsProps, newBudget: n
 export const repairHouse = (house: HousesProps) => {
     return house.repaired = true;
 }
+export const toFireStaff = (employee: GovermentBuildingsProps, staffToFired: number)=> {
+    return employee.staffCount -= staffToFired;
+}
