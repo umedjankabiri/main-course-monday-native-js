@@ -71,3 +71,14 @@ test("Budget should be changed form HOSPITAL", ()=> {
 
     expect(city.govermentBuildings[0].budget).toBe(300000);
 })
+test("Budget should be changed for FIRE-STATION", ()=> {
+    expect(city.govermentBuildings[1].budget).toBe(50000);
+
+    addMoneyToBudget(city.govermentBuildings[1],100000)
+
+    expect(city.govermentBuildings[1].budget).toBe(150000);
+
+    addMoneyToBudget(city.govermentBuildings[1],-10000)
+
+    expect(city.govermentBuildings[1].budget).toBe(140000);
+})
