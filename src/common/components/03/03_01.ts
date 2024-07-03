@@ -12,3 +12,6 @@ export const toFireStaff = (employee: GovermentBuildingsProps, staffToFired: num
 export const toHireStaff = (employee: GovermentBuildingsProps, staffToHire: number)=> {
     return employee.staffCount += staffToHire;
 }
+export function createMessage(city: CityProps) {
+    return `Hello ${city.title} citizens. I want you to be happy. All ${city.citizensNumber} people`
+}
