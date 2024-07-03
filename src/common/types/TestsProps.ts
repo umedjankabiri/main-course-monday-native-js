@@ -36,3 +36,6 @@ type AddressProps = {
     street: StreetProps
     number?: number
 }
+type StreetProps = {
+    title: string
+}
