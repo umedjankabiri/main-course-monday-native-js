@@ -27,3 +27,8 @@ export type CityProps = {
     govermentBuildings: GovermentBuildingsProps[]
     citizensNumber: number
 }
+export type HousesProps = {
+    buildedAt: number
+    repaired: boolean
+    address: AddressProps
+}
