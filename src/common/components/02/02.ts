@@ -27,3 +27,5 @@ export const man: StudentProps = {
         }
     ],
 }
+
+console.log(man.name)
