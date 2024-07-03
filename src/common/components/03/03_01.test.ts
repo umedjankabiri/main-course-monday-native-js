@@ -1,4 +1,5 @@
 import {CityProps} from "common/types/TestsProps.ts";
+import {addMoneyToBudget} from "common/components/03/03_01.ts";
 
 let city: CityProps;
 
@@ -61,4 +62,12 @@ beforeEach(() => {
         ],
         citizensNumber: 20000000
     }
+})
+
+test("Budget should be changed form HOSPITAL", ()=> {
+    expect(city.govermentBuildings[0].budget).toBe(200000);
+
+    addMoneyToBudget(city.govermentBuildings[0],100000)
+
+    expect(city.govermentBuildings[0].budget).toBe(300000);
 })
