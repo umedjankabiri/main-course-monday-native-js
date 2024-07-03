@@ -32,3 +32,7 @@ export type HousesProps = {
     repaired: boolean
     address: AddressProps
 }
+type AddressProps = {
+    street: StreetProps
+    number?: number
+}
