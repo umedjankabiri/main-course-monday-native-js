@@ -115,3 +115,6 @@ test("Staff should be increased", ()=> {
     expect(city.govermentBuildings[0].staffCount).toBe(2200);
     expect(city.govermentBuildings[1].staffCount).toBe(220);
 })
+test("Greeting message should be correct for city", ()=> {
+    expect(createMessage(city)).toBe(`Hello ${city.title} citizens. I want you to be happy. All ${city.citizensNumber} people`)
+})
