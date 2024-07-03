@@ -39,3 +39,9 @@ type AddressProps = {
 type StreetProps = {
     title: string
 }
+export type GovermentBuildingsProps = {
+    type: 'HOSPITAL' | 'FIRE-STATION'
+    budget: number
+    staffCount: number
+    address: AddressProps
+}
