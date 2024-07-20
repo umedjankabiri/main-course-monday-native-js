@@ -1,4 +1,5 @@
 import {CityProps} from "common/types/TestsProps.ts";
+import {demolishHousesOnTheStreet} from "common/components/04/04_02.ts";
 
 let city: CityProps;
 
@@ -64,5 +65,12 @@ beforeEach(() => {
         ],
         citizensNumber: 1000000
     }
+})
+
+test("Houses should be destroyed", ()=> {
+    demolishHousesOnTheStreet(city, "Happy street")
+
+    expect(city.houses.length).toBe(1);
+    expect(city.houses[0].id).toBe(1);
 })
 
