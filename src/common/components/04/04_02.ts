@@ -8,3 +8,6 @@ export const getStreetsTitlesOfGovernmentsBuildings = (buildings: GovermentBuild
 
 export const getHousesOnTheStreet = (city: CityProps, street: string) =>
     city.houses.filter(house => house.address.street.title === street)
+
+export const getBuildingsWithStaffCountGreaterThen = (buildings: GovermentBuildingsProps[], count: number) =>
+    buildings.filter(building => building.staffCount > count)
