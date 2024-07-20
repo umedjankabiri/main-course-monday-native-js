@@ -1,5 +1,9 @@
 import {CityProps} from "common/types/TestsProps.ts";
-import {getStreetsTitlesOfGovernmentsBuildings} from "common/components/05/05_01.ts";
+import {
+    createMessages,
+    getStreetsTitlesOfGovernmentsBuildings,
+    getStreetsTitlesOfHouses
+} from "common/components/05/05_01.ts";
 
 let city: CityProps
 
@@ -73,4 +77,13 @@ test("list of streets titles of governments buildings", ()=> {
     expect(streetsNames.length).toBe(2);
     expect(streetsNames[0]).toBe("Central Str");
     expect(streetsNames[1]).toBe("South Str");
+})
+
+test("list of streets titles", ()=> {
+    let streets = getStreetsTitlesOfHouses(city.houses)
+
+    expect(streets.length).toBe(3);
+    expect(streets[0]).toBe("White street");
+    expect(streets[1]).toBe("Happy street");
+    expect(streets[2]).toBe("Happy street");
 })
