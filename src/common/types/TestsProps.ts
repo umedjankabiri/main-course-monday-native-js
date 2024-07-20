@@ -24,10 +24,11 @@ type StudentTechnologiesProps = {
 export type CityProps = {
     title: string
     houses: HousesProps[]
-    govermentBuildings: GovermentBuildingsProps[]
+    governmentBuildings: GovermentBuildingsProps[]
     citizensNumber: number
 }
 export type HousesProps = {
+    id?: number
     buildedAt: number
     repaired: boolean
     address: AddressProps
@@ -45,3 +46,5 @@ export type GovermentBuildingsProps = {
     staffCount: number
     address: AddressProps
 }
+
+/* *** Houses props for testing houses *** */

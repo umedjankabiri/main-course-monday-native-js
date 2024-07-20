@@ -38,7 +38,7 @@ beforeEach(() => {
                 }
             }
         ],
-        govermentBuildings: [
+        governmentBuildings: [
             {
                 type: "HOSPITAL",
                 budget: 200000,
@@ -65,22 +65,22 @@ beforeEach(() => {
 })
 
 test("Budget should be changed form HOSPITAL", ()=> {
-    expect(city.govermentBuildings[0].budget).toBe(200000);
+    expect(city.governmentBuildings[0].budget).toBe(200000);
 
-    addMoneyToBudget(city.govermentBuildings[0],100000)
+    addMoneyToBudget(city.governmentBuildings[0],100000)
 
-    expect(city.govermentBuildings[0].budget).toBe(300000);
+    expect(city.governmentBuildings[0].budget).toBe(300000);
 })
 test("Budget should be changed for FIRE-STATION", ()=> {
-    expect(city.govermentBuildings[1].budget).toBe(50000);
+    expect(city.governmentBuildings[1].budget).toBe(50000);
 
-    addMoneyToBudget(city.govermentBuildings[1],100000)
+    addMoneyToBudget(city.governmentBuildings[1],100000)
 
-    expect(city.govermentBuildings[1].budget).toBe(150000);
+    expect(city.governmentBuildings[1].budget).toBe(150000);
 
-    addMoneyToBudget(city.govermentBuildings[1],-10000)
+    addMoneyToBudget(city.governmentBuildings[1],-10000)
 
-    expect(city.govermentBuildings[1].budget).toBe(140000);
+    expect(city.governmentBuildings[1].budget).toBe(140000);
 })
 test("Houses should be repaired", ()=> {
     expect(city.houses[0].repaired).toBe(false);
@@ -96,24 +96,24 @@ test("Houses should be repaired", ()=> {
     expect(city.houses[2].repaired).toBe(true);
 })
 test("Staff should be fired", ()=> {
-    expect(city.govermentBuildings[0].staffCount).toBe(2000);
-    expect(city.govermentBuildings[1].staffCount).toBe(200);
+    expect(city.governmentBuildings[0].staffCount).toBe(2000);
+    expect(city.governmentBuildings[1].staffCount).toBe(200);
 
-    toFireStaff(city.govermentBuildings[0], 200)
-    toFireStaff(city.govermentBuildings[1], 20)
+    toFireStaff(city.governmentBuildings[0], 200)
+    toFireStaff(city.governmentBuildings[1], 20)
 
-    expect(city.govermentBuildings[0].staffCount).toBe(1800);
-    expect(city.govermentBuildings[1].staffCount).toBe(180);
+    expect(city.governmentBuildings[0].staffCount).toBe(1800);
+    expect(city.governmentBuildings[1].staffCount).toBe(180);
 })
 test("Staff should be increased", ()=> {
-    expect(city.govermentBuildings[0].staffCount).toBe(2000);
-    expect(city.govermentBuildings[1].staffCount).toBe(200);
+    expect(city.governmentBuildings[0].staffCount).toBe(2000);
+    expect(city.governmentBuildings[1].staffCount).toBe(200);
 
-    toHireStaff(city.govermentBuildings[0], 200)
-    toHireStaff(city.govermentBuildings[1], 20)
+    toHireStaff(city.governmentBuildings[0], 200)
+    toHireStaff(city.governmentBuildings[1], 20)
 
-    expect(city.govermentBuildings[0].staffCount).toBe(2200);
-    expect(city.govermentBuildings[1].staffCount).toBe(220);
+    expect(city.governmentBuildings[0].staffCount).toBe(2200);
+    expect(city.governmentBuildings[1].staffCount).toBe(220);
 })
 test("Greeting message should be correct for city", ()=> {
     expect(createMessage(city)).toBe(`Hello ${city.title} citizens. I want you to be happy. All ${city.citizensNumber} people`)
