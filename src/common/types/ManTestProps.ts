@@ -8,3 +8,6 @@ type LessonTestProps = {
     title: string
     name?: string
 }
+type AddressTestProps = {
+    street: StreetTestProps
+}
