@@ -4,3 +4,7 @@ export type ManTestProps = {
     lessons: LessonTestProps[]
     address: AddressTestProps
 }
+type LessonTestProps = {
+    title: string
+    name?: string
+}
