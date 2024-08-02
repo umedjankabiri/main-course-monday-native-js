@@ -11,3 +11,6 @@ type LessonTestProps = {
 type AddressTestProps = {
     street: StreetTestProps
 }
+type StreetTestProps = {
+    title: string
+}
