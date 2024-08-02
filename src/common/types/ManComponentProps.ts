@@ -6,3 +6,7 @@ export type ManComponentProps = {
     food?: string[]
     car?: ModelProps
 }
+
+type ModelProps = {
+    model: string
+}
