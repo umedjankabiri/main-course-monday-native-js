@@ -13,20 +13,19 @@ function App() {
         {id: 4, name: "Viktor"},
         {id: 5, name: "Ignat"},
     ]
-    const userList = users.map(user => (
-        <li key={user.id}>{user.name}</li>
-    ));
-  return (
-    <>
-      <ul>
-          {nameList}
-      </ul>
-      <ul>
-          {userList}
-      </ul>
-        <User/>
-    </>
-  )
+    const userList = users.map(user => (<li key={user.id}>{user.name}</li>));
+
+    return (
+        <>
+            <ul>
+                {nameList}
+            </ul>
+            <ul>
+                {userList}
+            </ul>
+            <User/>
+        </>
+    )
 }
 
 export default App
