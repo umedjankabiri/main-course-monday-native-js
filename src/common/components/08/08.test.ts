@@ -43,3 +43,15 @@ test("reference type object test", ()=> {
     expect(user.address).toBe(newUser.address)
     expect(user.address?.street).toBe("New Street")
 })
+test("reference type array test", ()=> {
+    let newUser: UsersProps = {
+        name: "Leyla",
+        age: 32,
+        address: user.address
+    }
+    const newUsers = [user, newUser, {name: "Yusuf", age: 1, address: user.address}]
+    const newArrayUsers = [user, newUser]
+    newArrayUsers[0].name = "Umedjan Kabiri"
+
+    expect(newUsers[0].name).toEqual("Umedjan Kabiri")
+})
