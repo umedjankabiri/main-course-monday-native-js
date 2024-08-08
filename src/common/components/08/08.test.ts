@@ -22,3 +22,12 @@ test("array reference test", ()=> {
 
     expect(users[users.length - 1]).toEqual({name: "Muhammad", age: 6})
 })
+test("value type test", ()=> {
+    const usersCount = 3
+    let newUsersCount = 1
+
+    newUsersCount++
+
+    expect(newUsersCount).toBe(2)
+    expect(usersCount).toBe(3)
+})
